@@ -11,8 +11,8 @@
   > The Date-Time API sử dụng:
 
 1. **Unicode Common Locale Data Repository (CLDR)** {Kho dữ liệu Vùng Loại ngôn ngữ Chung Unicode} **{ yyyy-MM-dd HH:mm:ss}**
-1. **_Time-Zone Database_** (TZDB). {Cơ sở dữ liệu múi giờ}
-1. Cung cấp thông tin múi giờ từ năm 1970 đến nay
+2. **_Time-Zone Database_** (TZDB). {Cơ sở dữ liệu múi giờ}
+3. Cung cấp thông tin múi giờ từ năm 1970 đến nay
 
 ### 1.1 Đặc trưng của The Date-time API là một số lịch đặc biệt có thể được sử dụng như:
 
@@ -104,7 +104,7 @@ import java.time.[tên class trong package]
 
 #### **java.time.[CLASS]**
 
-1.  **CLOCK**
+1A.  **CLOCK**
 
 - Một đồng hồ cung cấp quyền truy cập đến thời điểm hiện tại, ngày và thời gian sử dụng múi giờ.
 
@@ -116,7 +116,7 @@ Instant instant = Instant.now(clock);
 System.out.println(instant);
 ```
 
-2.  **Duration**
+2B.  **Duration**
 
 - Một lượng thời gian dựa trên thời gian, chẳng hạn như '34.5 giây'.
 
@@ -134,7 +134,7 @@ Duration duration = Duration.ofHours(20);
 --- // Output: PT20H (20 hours)
 ```
 
-3.  **Instant**
+3C.  **Instant**
 
 - Một điểm tức thời trên dòng thời gian.
 
@@ -146,7 +146,7 @@ Instant instant = Instant.now();
 ---> Output: 2023-08-20T15:16:26.355Z
 ```
 
-4. **LocalDate**
+4D. **LocalDate**
 
 - Một ngày không kèm theo múi giờ trong hệ thống lịch ISO-8601, ví dụ như 2007-12-03.
 
@@ -162,7 +162,7 @@ LocalDate localDate = LocalDate.of(2023, 8, 20);
 ---> Output: 2023-08-20
 ```
 
-5. **LocalDateTime**
+5E. **LocalDateTime**
 
 - Một ngày-thời gian không kèm theo múi giờ trong hệ thống lịch ISO-8601, ví dụ như 2007-12-03T10:15:30.
 
@@ -180,7 +180,7 @@ LocalDateTime localDateTime = LocalDateTime.of(2023, 8, 20, 8, 16, 26, 937);
 --- Output: 2023-08-20T08:16:26.937
 ```
 
-6. **LocalTime**
+6F. **LocalTime**
 
 - Một thời gian không kèm theo múi giờ trong hệ thống lịch ISO-8601, ví dụ như 10:15:30.
 
@@ -198,7 +198,7 @@ LocalTime localTime = LocalTime.of(8, 16, 26, 943);
 --- Output: 08:16:26.943
 ```
 
-7. **MonthDay**
+7G. **MonthDay**
 
 - Một tháng-ngày trong hệ thống lịch ISO-8601, ví dụ như --12-03.
 
@@ -216,7 +216,7 @@ MonthDay monthDay = MonthDay.of(Month.AUGUST, 20);
 --- // Output: --08-20
 ```
 
-8. **OffsetDateTime**
+8H. **OffsetDateTime**
 
 - Một ngày-thời gian với một chênh lệch từ UTC/Greenwich trong hệ thống lịch ISO-8601, ví dụ như 2007-12-03T10:15:30+01:00.
 
@@ -234,7 +234,7 @@ OffsetDateTime offsetDateTime = OffsetDateTime.of(2023, 8, 20, 8, 16, 26, 954, Z
 --- Output: 2023-08-20T08:16:26.954-07:00
 ```
 
-9. **OffsetTime**
+9J. **OffsetTime**
 
 - Một thời gian với một chênh lệch từ UTC/Greenwich trong hệ thống lịch ISO-8601 _ví dụ như 10:15:30+01:00._
 
@@ -252,7 +252,7 @@ OffsetTime offsetTime = OffsetTime.of(8, 16, 26, 957, ZoneOffset.ofHours(-7));
 --- // Output: 08:16:26.957-07:00
 ```
 
-10. **Period**
+10K. **Period**
 
 - Một lượng thời gian dựa trên ngày trong hệ thống lịch ISO-8601,
   chẳng hạn như '2 năm, 3 tháng và 4 ngày'.
@@ -271,7 +271,7 @@ Period period = Period.ofDays(10);
 --- // Output: P10D (10 days)
 ```
 
-11. **Year**
+11L. **Year**
 
 - Một năm trong hệ thống lịch ISO-8601, chẳng hạn như 2007.
 
@@ -289,7 +289,7 @@ Year year = Year.of(2023);
 --- // Output: 2023
 ```
 
-12. **YearMonth**
+12M. **YearMonth**
 
 - Một năm-tháng trong hệ thống lịch ISO-8601, chẳng hạn như 2007-12.
 
@@ -307,7 +307,7 @@ YearMonth yearMonth = YearMonth.of(2023, 8);
 --- // Output: 2023-08
 ```
 
-13. **ZonedDateTime**
+13N. **ZonedDateTime**
 
 - Một ngày-thời gian với múi giờ trong hệ thống lịch ISO-8601,
   chẳng hạn như 2007-12-03T10:15:30+01:00 Europe/Paris.
@@ -326,7 +326,7 @@ ZonedDateTime zonedDateTime = ZonedDateTime.of(2023, 8, 21, 0, 16, 26, 941, Zone
 --- // Output: 2023-08-21T00:16:26.941+09:00[Asia/Tokyo]
 ```
 
-14. **ZoneId**
+14O. **ZoneId**
 
 - Một ID múi giờ, chẳng hạn như Europe/Paris.
 
@@ -344,7 +344,7 @@ ZoneId zoneId = ZoneId.of("Zone_ID");
 ---
 ```
 
-15. **ZoneOffset**
+15P. **ZoneOffset**
 
 - Một chênh lệch múi giờ từ Greenwich/UTC, chẳng hạn như +02:00.
 
@@ -362,7 +362,7 @@ ZoneOffset zoneOffset = ZoneOffset.of("+02:00");
 --- //Output: +02:00
 ```
 
-16 **Instant:**
+16Q. **Instant:**
 
 - Instant là một dấu thời gian số họcInstant hiện tại có thể được lấy từ một đối tượng ClockInstant thường được sử dụng để ghi log và lưu trữ một điểm thời gian cụ thể.
 
@@ -380,7 +380,7 @@ Instant instant = Instant.now();
 --- // Output: 2023-08-20T15:16:26.355Z
 ```
 
-17. **LocalDate:**
+17R. **LocalDate:**
 
 - LocalDate lưu trữ một ngày mà không kèm theo múi giờNó có thể được sử dụng để lưu trữ ngày sinh nhật.
 
@@ -398,7 +398,7 @@ LocalDate localDate = LocalDate.of(year, month, day);
 ---
 ```
 
-18. **LocalTime:**
+18S. **LocalTime:**
 
 - LocalTime lưu trữ một thời gian mà không kèm theo ngàyNó có thể được sử dụng để lưu trữ thời gian mở cửa hoặc đóng cửa.
 
@@ -416,7 +416,7 @@ LocalDate localDate = LocalDate.of(year, month, day);
 ---
 ```
 
-19. **LocalDateTime:**
+19T. **LocalDateTime:**
 
 - LocalDateTime lưu trữ cả ngày và thời gian mà không kèm theo múi giờ.
 
@@ -434,7 +434,7 @@ LocalDate localDate = LocalDate.of(year, month, day);
 ---
 ```
 
-20. **ZonedDateTime:**
+20U. **ZonedDateTime:**
 
 - ZonedDateTime lưu trữ cả ngày, thời gian và múi giờ.
 
@@ -452,7 +452,7 @@ LocalDate localDate = LocalDate.of(year, month, day);
 ---
 ```
 
-21. **Duration:**
+21V. **Duration:**
 
 - Duration là một khoảng thời gian dựa trên thời gian, ví dụ '35 seconds'.
 
@@ -470,7 +470,7 @@ LocalDate localDate = LocalDate.of(year, month, day);
 ---
 ```
 
-22. **Period**
+22W. **Period**
 
 - Period là một khoảng thời gian dựa trên ngày, ví dụ '2 years, 3 months and 4 days'.
 
@@ -488,7 +488,7 @@ Period period = Period.ofDays(10);
 --- // Output: P10D (10 days)
 ```
 
-23. **Month** [ENUM]
+23Y. **Month** [ENUM]
 
 - Month lưu trữ một tháng riêng lẻ trong năm, ví dụ như "DECEMBER".
 
@@ -506,7 +506,7 @@ Month august = Month.AUGUST;
 --- //Output: AUGUST
 ```
 
-24. **DayOfWeek** [ENUM]
+24Z. **DayOfWeek** [ENUM]
 
 - DayOfWeek lưu trữ một ngày trong tuần riêng lẻ, ví dụ như "TUESDAY".
 
@@ -542,7 +542,7 @@ public class DayOfWeekExample {
 --- Future day: MONDAY
 ```
 
-25. **Year**
+25AA. **Year**
 
 - Year lưu trữ một năm riêng lẻ, ví dụ như "2010".
 
@@ -560,7 +560,7 @@ Year year = Year.of(2023);
 --- // Output: 2023
 ```
 
-26. **YearMonth**
+26AB. **YearMonth**
 
 - YearMonth lưu trữ một cặp năm và tháng, ví dụ như "2007-12".
 
@@ -578,7 +578,7 @@ YearMonth yearMonth = YearMonth.of(2023, 8);
 --- // Output: 2023-08
 ```
 
-27. **MonthDay:**
+27AC. **MonthDay:**
 
 - MonthDay lưu trữ một cặp tháng và ngày, ví dụ như "--12-03" (ngày 3 tháng 12).
 
@@ -596,7 +596,7 @@ MonthDay monthDay = MonthDay.of(Month.MONTH_CONSTANT, DAY);
 ---
 ```
 
-28. **OffsetTime:**
+28AD. **OffsetTime:**
 
 - OffsetTime lưu trữ thời gian và chênh lệch múi giờ từ UTC mà không kèm theo ngày, ví dụ như "11:30+01:00".
 
@@ -614,7 +614,7 @@ OffsetTime offsetTime = OffsetTime.of(8, 16, 26, 957, ZoneOffset.ofHours(-7));
 --- // Output: 08:16:26.957-07:00
 ```
 
-29. **OffsetDateTime:**
+29AE. **OffsetDateTime:**
 
 - OffsetDateTime lưu trữ ngày, thời gian, và chênh lệch múi giờ từ UTC, ví dụ như "2010-12-03T11. 30+01. 00".
 

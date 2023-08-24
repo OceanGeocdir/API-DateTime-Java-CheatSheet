@@ -1387,68 +1387,67 @@ range(TemporalField field)
 > ChronoField định nghĩa các trường thời gian tiêu chuẩn
 
 ```Java
-// Enum Constants(hằng số)
-
+  // Enum Constants(hằng số)
 ALIGNED_DAY_OF_WEEK_IN_MONTH
-// The aligned day-of-week within a month.
+  // The aligned day-of-week within a month.
 ALIGNED_DAY_OF_WEEK_IN_YEAR
-// The aligned day-of-week within a year.
+  // The aligned day-of-week within a year.
 ALIGNED_WEEK_OF_MONTH
-// The aligned week within a month.
+  // The aligned week within a month.
 ALIGNED_WEEK_OF_YEAR
-// The aligned week within a year.
+  // The aligned week within a year.
 AMPM_OF_DAY
-// The am-pm-of-day.
+  // The am-pm-of-day.
 CLOCK_HOUR_OF_AMPM
-// The clock-hour-of-am-pm.
+  // The clock-hour-of-am-pm.
 CLOCK_HOUR_OF_DAY
-// The clock-hour-of-day.
+  // The clock-hour-of-day.
 DAY_OF_MONTH
-// The day-of-month.
+  // The day-of-month.
 DAY_OF_WEEK
-// The day-of-week, such as Tuesday.
+  // The day-of-week, such as Tuesday.
 DAY_OF_YEAR
-// The day-of-year.
+  // The day-of-year.
 EPOCH_DAY
-// The epoch-day, based on the Java epoch of 1970-01-01 (ISO).
+  // The epoch-day, based on the Java epoch of 1970-01-01 (ISO).
 ERA
-// The era.
+  // The era.
 HOUR_OF_AMPM
-// The hour-of-am-pm.
+  // The hour-of-am-pm.
 HOUR_OF_DAY
-// The hour-of-day.
+  // The hour-of-day.
 INSTANT_SECONDS
-// The instant epoch-seconds.
+  // The instant epoch-seconds.
 MICRO_OF_DAY
-// The micro-of-day.
+  // The micro-of-day.
 MICRO_OF_SECOND
-// The micro-of-second.
+  // The micro-of-second.
 MILLI_OF_DAY
-// The milli-of-day.
+  // The milli-of-day.
 MILLI_OF_SECOND
-// The milli-of-second.
+  // The milli-of-second.
 MINUTE_OF_DAY
-// The minute-of-day.
+  // The minute-of-day.
 MINUTE_OF_HOUR
-// The minute-of-hour.
+  // The minute-of-hour.
 MONTH_OF_YEAR
-// The month-of-year, such as March.
+  // The month-of-year, such as March.
 NANO_OF_DAY
-// The nano-of-day.
+  // The nano-of-day.
 NANO_OF_SECOND
-// The nano-of-second.
+  // The nano-of-second.
 OFFSET_SECONDS
-// The offset from UTC/Greenwich.
+  // The offset from UTC/Greenwich.
 PROLEPTIC_MONTH
-// The proleptic-month based, counting months sequentially from year 0.
+  // The proleptic-month based, counting months sequentially from year 0.
 SECOND_OF_DAY
-// The second-of-day.
+  // The second-of-day.
 SECOND_OF_MINUTE
-//The second-of-minute.
+  //The second-of-minute.
 YEAR
-//The proleptic year, such as 2012.
+  //The proleptic year, such as 2012.
 YEAR_OF_ERA
-//The year within the era.
+  //The year within the era.
 ```
 
 - Ví dụ về ENUM
